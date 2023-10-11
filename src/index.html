@@ -1,12 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css -->
     <link href="/dist/output.css" rel="stylesheet">
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+        integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Todo app - with js</title>
 </head>
-<body>
-    <h1 class="text-5xl text-blue-500 text-center">Todo App</h1> 
+
+<body class="font-Inter">
+    <!-- navbar -->
+    <nav
+        class="h-20 w-full bg-white dark:bg-[#18181b] shadow-sm border-b-[1px] dark:border-b-[0.5px] border-gray-50 dark:border-[#2b2c2e] flex justify-between items-center px-3  sm:px-12 sticky top-0 z-50">
+        <h1 class="text-2xl sm:text-3xl font-[600] text-blue-500 ">Todo App</h1>
+        <button id="theme-btn" class="h-12 w-12 rounded-full grid items-center bg-[#f4f4ff] dark:bg-[#27272b]">
+            <i class="fa-solid fa-moon text-gray-900 dark:text-white text-lg"></i>
+        </button>
+    </nav>
+
+    <!-- main container -->
+    <main class="min-h-screen w-full bg-slate-50 dark:bg-[#18181b]">
+        <section class="py-7 pt-12 px-4 sm:px-5 w-full flex flex-col items-center gap-14">
+            <!-- add todo -->
+            <div
+                class="bg-white dark:bg-[#1b1b22] w-[700px] max-md:w-full shadow-sm p-7 rounded-lg border-[0.7px] border-gray-200 dark:border-[#343638a2] flex flex-col gap-7">
+                <textarea id="todo-input" rows="3" maxlength="100" placeholder="your todo..."
+                    class="w-full resize-none p-3 dark:bg-[#18181b] border-[0.6px] border-gray-400 dark:border-[#343638] text-gray-900 dark:text-white"></textarea>
+                <button id="todo-submit"
+                    class="self-end px-12 py-2 hover:opacity-70 rounded-md text-white bg-[#5838e4]">Add</button>
+            </div>
+
+            <!-- todos -->
+            <div id="todos-container" class="flex flex-col gap-4 w-[700px] max-md:w-full"></div>
+
+            </div>
+
+        </section>
+    </main>
+
 </body>
+<script src="./script.js"></script>
+
 </html>
